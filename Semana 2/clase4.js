@@ -3,74 +3,42 @@
 //--------------------------------------------------------------
 
 // 👇 Primero capturar los elementos que vamos a modificar
-const sitio = document.querySelector('body');
-let btnTema = document.querySelector('button');
-let menuItems = document.querySelectorAll('nav ul li');
-let contenedorDeNoticias = document.querySelector('main');
-let notas = document.querySelectorAll('article');
-let titulos = document.querySelectorAll('article h2');
+const sitio = document.querySelector("body");
+let btnTema = document.querySelector("button");
+let menuItems = document.querySelectorAll("nav ul li");
+let contenedorDeNoticias = document.querySelector("main");
+let notas = document.querySelectorAll("article");
+let titulos = document.querySelectorAll("article h2");
 
 // contenedorDeNoticias.style.backgroundColor = "green";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 👇acá podemos ver todas las propiedades CSS que podemos modificar con JS
-console.log(menuItems);
-console.log(menuItems[1].style);
-
-
-
-
-
-
-
-
-
-
+//console.log(menuItems);
+//console.log(menuItems[1].style);
 
 // for (let i = 0; i < menuItems.length; i++) {
 //     menuItems[i].style.color = "red";
 // }
 
-menuItems.forEach(item => {
-    item.style.textTransform = "uppercase"
-    item.style.color = "aqua";
-    item.style.backgroundColor = "rgba(255,255,255, 0.2)"
-    item.style.borderRadius = "50vh"
-    item.style.padding = "10px"
-    item.style.marginTop = "20px"
+menuItems.forEach((item) => {
+  item.style.textTransform = "uppercase";
+  item.style.color = "aqua";
+  item.style.backgroundColor = "rgba(255,255,255, 0.2)";
+  item.style.borderRadius = "50vh";
+  item.style.padding = "10px";
+  item.style.marginTop = "20px";
 });
-
-
-
-
-
-
-
-
-
 
 //--------------------------------------------------------------
 // CLASES (clases que ya existen en el style.css)
 //--------------------------------------------------------------
 
+/*console.log(sitio.classList);
+
+console.log(sitio.classList.contains("dark"));
 console.log(sitio.classList);
 
-// console.log(sitio.classList.contains("dark"));
-// console.log(sitio.classList);
+*/
 
 // console.log(sitio.classList.add("dark"));
 // console.log(sitio.classList);
@@ -78,17 +46,13 @@ console.log(sitio.classList);
 // console.log(sitio.classList.remove("dark"));
 // console.log(sitio.classList);
 
-// console.log(sitio.classList.remove("dark")); 
-
-
+// console.log(sitio.classList.remove("dark"));
 
 // console.log(sitio.classList.toggle("dark"));
 // console.log(sitio.classList);
 
 // console.log(sitio.classList.toggle("dark"));
 // console.log(sitio.classList);
-
-
 
 /* -------------------------------------------------------------------------- */
 /*                          CONSIGNA MESA DE TRABAJO                          */
@@ -105,6 +69,12 @@ console.log(sitio.classList);
 // De lo contrario, si está en modo claro debe decir "Cambiar a modo oscuro 🌛"
 
 function elegirTema() {
+  var fondo = sitio.classList.contains("dark");
 
+  if (fondo == true) {
+    sitio.classList.remove("dark");
+  } else {
+    sitio.classList.add("dark");
+  }
 }
-elegirTema();
+//elegirTema();
